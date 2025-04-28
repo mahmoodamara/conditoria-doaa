@@ -56,8 +56,8 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-  padding-top: 100px; /* تبتعد عن النافبار */
-  padding-bottom: 40px; /* تضيف مساحة تحت الصورة */  }
+  padding-top: 80px; /* تبتعد عن النافبار */
+  }
   .hero h1 {
     font-size: 3rem;
     font-weight: 700;
@@ -140,11 +140,10 @@ body {
   }
   
   @media (max-width: 768px) {
-    .hero {
-        padding-top: 100px; /* 🛠️ نزيد المسافة للهواتف والتابلت */
-      }
+
     .hero h1 {
-      font-size: 2.2rem;
+      font-size: 1.8rem;
+      padding-top: 80px;
     }
     .hero p {
       font-size: 1.1rem;
@@ -160,7 +159,9 @@ body {
   @media (max-width: 480px) {
 
     .hero h1 {
-      font-size: 1.8rem;
+        padding-top: 80px;
+
+      font-size: 1.5rem;
     }
     .hero p {
       font-size: 1rem;
@@ -181,9 +182,7 @@ body {
       width: 100%;
       text-align: center;
     }
-    .hero {
-        padding-top: 110px; /* 🛠️ نزيد أكثر للهواتف الصغيرة */
-      }
+
   }
 
   .buttons-container {
@@ -247,30 +246,13 @@ body {
       margin-right: auto;
     }
   }
-  
   /* Text Adjustments for Tablets */
-  @media (max-width: 768px) {
-    .hero h1 {
-      font-size: 1.8rem;
-    }
-  
-    .hero p {
-      font-size: 1.1rem;
-    }
-  
-    .about-text h2 {
-      font-size: 1.6rem;
-    }
-  
-    .about-text p {
-      font-size: 1rem;
-    }
-  }
+
   
   /* Text Adjustments for Mobile Phones */
   @media (max-width: 480px) {
     .hero h1 {
-      font-size: 1.5rem;
+      font-size: 1.3rem;
     }
   
     .hero p {
