@@ -84,7 +84,7 @@
         align-items: center;
         justify-content: center;
         text-align: center;
-        padding-top: 80px; /* لتفادي تغطية النافبار */
+        padding-top: 80px;
         padding-left: 20px;
         padding-right: 20px;
         box-sizing: border-box;
@@ -103,36 +103,50 @@
         max-width: 600px;
       }
       
-      /* Responsive for tablets */
+      .special-offer {
+        font-weight: bold;
+        font-size: 1.2rem;
+        color: #c0392b;
+      }
+      
+      /* حركة الصورة */
+      .rotating-image {
+        animation: slow-rotate 5s infinite alternate ease-in-out;
+      }
+      
+      @keyframes slow-rotate {
+        0% { transform: rotate(-2deg); }
+        100% { transform: rotate(2deg); }
+      }
+      
+      /* سهم النزول */
+      .scroll-down {
+        display: inline-block;
+        font-size: 2rem;
+        color: #6b4c9a;
+        animation: bounce 2s infinite;
+      }
+      
+      @keyframes bounce {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(10px); }
+      }
+      
+      /* Responsive adjustments */
       @media (max-width: 768px) {
-        .hero h1 {
-          font-size: 2.2rem;
-        }
-        .hero p {
-          font-size: 1.3rem;
-        }
+        .hero h1 { font-size: 2.2rem; }
+        .hero p { font-size: 1.3rem; }
       }
       
-      /* Responsive for mobile devices */
       @media (max-width: 480px) {
-        .hero h1 {
-          font-size: 1.8rem;
-        }
-        .hero p {
-          font-size: 1.1rem;
-        }
+        .hero h1 { font-size: 1.8rem; }
+        .hero p { font-size: 1.1rem; }
       }
       
-      /* Extra small devices (phones under 360px) */
       @media (max-width: 360px) {
-        .hero h1 {
-          font-size: 1.5rem;
-        }
-        .hero p {
-          font-size: 1rem;
-        }
+        .hero h1 { font-size: 1.5rem; }
+        .hero p { font-size: 1rem; }
       }
-      
   
   /* ===========================
      5. About Section
@@ -864,45 +878,124 @@
   /* ===========================
      11. Footer Links
      =========================== */
-     .footer-link {
-        color: #6b4c9a;
-        font-weight: bold;
-        text-decoration: none;
-        padding: 0 10px;
-        font-size: 1rem; /* إضافة حجم خط افتراضي */
-        transition: color 0.3s, text-decoration 0.3s;
-      }
-      
-      .footer-link:hover {
-        color: #ff6ec4;
-        text-decoration: underline;
-      }
-      
-      /* Responsive Adjustments */
-      
-      /* Screens ≤ 768px */
-      @media (max-width: 768px) {
-        .footer-link {
-          font-size: 0.9rem;
-          padding: 0 8px;
-        }
-      }
-      
-      /* Screens ≤ 576px */
-      @media (max-width: 576px) {
-        .footer-link {
-          font-size: 0.85rem;
-          padding: 0 6px;
-        }
-      }
-      
-      /* Screens ≤ 400px */
-      @media (max-width: 400px) {
-        .footer-link {
-          font-size: 0.8rem;
-          padding: 0 5px;
-        }
-      }
+  /* General footer style */
+.footer {
+    background: linear-gradient(135deg, #ffe4ec 0%, #f3d1f4 100%);
+    padding: 50px 20px;
+    text-align: center;
+    font-family: 'Cairo', sans-serif;
+  }
+  
+  /* Brand name */
+  .footer h5 {
+    color: #6b4c9a;
+    font-weight: bold;
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+  
+  /* Navigation links */
+  .footer .list-inline {
+    padding: 0;
+    margin-bottom: 30px;
+  }
+  
+  .footer .list-inline-item a {
+    color: #6b4c9a;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 8px 12px;
+    transition: color 0.3s ease;
+  }
+  
+  .footer .list-inline-item a:hover {
+    color: #e84a90; /* Pink on hover */
+  }
+  
+  /* Social media icons */
+  .footer .social-icons a {
+    color: #6b4c9a;
+    font-size: 1.8rem;
+    margin: 0 10px;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  .footer .social-icons a:hover {
+    color: #e84a90;
+    transform: scale(1.2);
+  }
+  
+  /* Newsletter form */
+  .footer .newsletter-form input[type="email"] {
+    padding: 12px;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 30px;
+    border: 2px solid #ffe4ec;
+    background: #fff0f6;
+    margin: 0 auto 10px;
+    font-size: 1rem;
+    text-align: center;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+  }
+  
+  .footer .newsletter-form input[type="email"]:focus {
+    border-color: #6b4c9a;
+    outline: none;
+  }
+  
+  .footer .newsletter-form button {
+    background-color: #6b4c9a;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    max-width: 200px;
+  }
+  
+  .footer .newsletter-form button:hover {
+    background-color: #e84a90;
+  }
+  
+  /* Contact info */
+  .footer p {
+    color: #6b4c9a;
+    font-size: 1rem;
+    margin-top: 20px;
+  }
+  
+  /* Back to top button */
+  .footer .back-to-top {
+    display: inline-block;
+    margin-top: 20px;
+    color: #6b4c9a;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .footer .back-to-top:hover {
+    color: #e84a90;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .footer .list-inline-item {
+      display: block;
+      margin-bottom: 10px;
+    }
+    
+    .footer .social-icons {
+      margin-top: 20px;
+    }
+  }
+  
       
   
   /* ===========================

@@ -149,3 +149,71 @@ productGrid.addEventListener("wheel", stopAutoScroll);
 if (window.innerWidth <= 768) {
   startAutoScroll();
 }
+
+
+
+// مدة العد التنازلي بالدقائق
+let countdownMinutes = 60;
+let countdownSeconds = 0;
+
+// تحويل الدقائق إلى ثواني
+let totalTime = countdownMinutes * 60 + countdownSeconds;
+
+// تحديد العنصر الذي سنعرض فيه العداد
+const countdownElement = document.getElementById('countdown');
+
+function updateCountdown() {
+    let minutes = Math.floor(totalTime / 60);
+    let seconds = totalTime % 60;
+
+    // عرض الشكل 09:05 مثلًا
+    countdownElement.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+
+    if (totalTime > 0) {
+        totalTime--;
+    } else {
+        clearInterval(timerInterval);
+        countdownElement.textContent = "انتهى العرض!";
+    }
+}
+
+// تحديث العداد كل ثانية
+let timerInterval = setInterval(updateCountdown, 1000);
+
+// عرض القيمة الأولية فورًا عند التحميل
+updateCountdown();
+
+
+// تحريك الفقاعات بشكل بسيط
+const bubbles = document.querySelectorAll('.bubble');
+
+bubbles.forEach(bubble => {
+    animateBubble(bubble);
+});
+
+function animateBubble(bubble) {
+    let moveX = Math.random() * 50 - 25; // تحريك بين -25px و +25px
+    let moveY = Math.random() * 50 - 25;
+
+    bubble.animate(
+        [
+            { transform: 'translate(0, 0)' },
+            { transform: `translate(${moveX}px, ${moveY}px)` },
+            { transform: 'translate(0, 0)' }
+        ],
+        {
+            duration: 8000 + Math.random() * 4000, // مدة عشوائية بين 8 و12 ثانية
+            iterations: Infinity,
+            direction: 'alternate',
+            easing: 'ease-in-out'
+        }
+    );
+}
+
+// كود الكتابة المتغيرة
+var typed = new Typed('#typed-text', {
+    strings: ["استمتع بأشهى الحلويات.", "نكهات لا تُنسى.", "لمسة من الحب في كل قطعة."],
+    typeSpeed: 50,
+    backSpeed: 30,
+    loop: true
+  });

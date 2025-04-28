@@ -13,9 +13,12 @@
 
   <!-- Animate.css -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 
 
@@ -23,7 +26,6 @@
 
 <body>
 
-<!-- Navbar -->
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-white py-3">
   <div class="container px-3">
@@ -65,21 +67,29 @@
     </h1>
 
     <p class="mb-4" style="color: #6b4c9a;">
-      استمتع بأشهى الحلويات مع لمسة من الفخامة والجمال.
+      <span id="typed-text"></span>
     </p>
 
-    <div >
+    <div>
       <a href="#" class="btn btn-pink btn-lg animate__animated animate__pulse animate__infinite">تسوق الآن</a>
       <a href="#" class="btn btn-outline-dark btn-lg">تعرف على قصتنا</a>
     </div>
 
+    <div class="special-offer mt-3">
+      ⏰ عرض خاص ينتهي خلال: <span id="countdown">60:00</span>
+    </div>
+
     <!-- الصورة أسفل الأزرار -->
     <div class="hero-image mt-4 animate__animated animate__fadeInUp" style="max-width: 280px; width: 100%;">
-      <img src="cake.png" alt="حلوى جميلة" style="width: 100%; border-radius: 20px;">
+      <img src="cake.png" alt="حلوى جميلة" style="width: 100%; border-radius: 20px;" class="rotating-image">
     </div>
+
+    <!-- سهم النزول -->
+    <a href="#next-section" class="scroll-down mt-4">
+      <i class="fas fa-chevron-down"></i>
+    </a>
   </div>
 </section>
-
 
 
 
@@ -336,27 +346,55 @@
 
 
 <!-- Footer -->
-<footer class="footer mt-5" style="background: linear-gradient(135deg, #ffe4ec 0%, #f3d1f4 100%); padding: 40px 20px 20px;">
+<footer class="footer mt-5" style="background: linear-gradient(135deg, #ffe4ec 0%, #f3d1f4 100%); padding: 50px 20px;">
   <div class="container text-center">
 
-    <!-- شعار أو اسم -->
-    <h5 style="color: #6b4c9a; font-weight: bold; margin-bottom: 20px;">🎀 كوندوتوريا دعاء</h5>
+    <!-- شعار -->
+    <h5 style="color: #6b4c9a; font-weight: bold; font-size: 1.8rem; margin-bottom: 30px;">🎀 كوندوتوريا دعاء</h5>
 
-    <!-- روابط تنقل صغيرة -->
-    <ul class="list-inline mb-4">
-      <li class="list-inline-item"><a href="#" class="footer-link">الرئيسية</a></li>
-      <li class="list-inline-item"><a href="#about-section" class="footer-link">عن دعاء</a></li>
-      <li class="list-inline-item"><a href="#products" class="footer-link">المنتجات</a></li>
-      <li class="list-inline-item"><a href="#offers" class="footer-link">العروض</a></li>
-      <li class="list-inline-item"><a href="#success-stories" class="footer-link">قصص النجاح</a></li>
-      <li class="list-inline-item"><a href="#contact" class="footer-link">تواصل معنا</a></li>
+    <!-- روابط التنقل -->
+    <ul class="list-inline mb-4" style="font-size: 1rem;">
+      <li class="list-inline-item mb-2"><a href="#" class="footer-link" style="color: #6b4c9a; text-decoration: none; padding: 8px 12px; transition: color 0.3s;">الرئيسية</a></li>
+      <li class="list-inline-item mb-2"><a href="#about-section" class="footer-link" style="color: #6b4c9a; text-decoration: none; padding: 8px 12px; transition: color 0.3s;">عن دعاء</a></li>
+      <li class="list-inline-item mb-2"><a href="#products" class="footer-link" style="color: #6b4c9a; text-decoration: none; padding: 8px 12px; transition: color 0.3s;">المنتجات</a></li>
+      <li class="list-inline-item mb-2"><a href="#offers" class="footer-link" style="color: #6b4c9a; text-decoration: none; padding: 8px 12px; transition: color 0.3s;">العروض</a></li>
+      <li class="list-inline-item mb-2"><a href="#success-stories" class="footer-link" style="color: #6b4c9a; text-decoration: none; padding: 8px 12px; transition: color 0.3s;">قصص النجاح</a></li>
+      <li class="list-inline-item mb-2"><a href="#contact" class="footer-link" style="color: #6b4c9a; text-decoration: none; padding: 8px 12px; transition: color 0.3s;">تواصل معنا</a></li>
     </ul>
 
-    <!-- حقوق -->
+    <!-- أيقونات التواصل الاجتماعي -->
+    <div class="social-icons mb-4">
+      <a href="#" class="me-3" style="color: #6b4c9a; font-size: 1.8rem; transition: color 0.3s;"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" class="me-3" style="color: #6b4c9a; font-size: 1.8rem; transition: color 0.3s;"><i class="fab fa-instagram"></i></a>
+      <a href="#" style="color: #6b4c9a; font-size: 1.8rem; transition: color 0.3s;"><i class="fab fa-whatsapp"></i></a>
+    </div>
+
+    <!-- نموذج الاشتراك بالنشرة البريدية -->
+    <form class="newsletter-form mb-4" style="max-width: 400px; margin: 0 auto;">
+      <input type="email" placeholder="ادخل بريدك الإلكتروني" style="padding: 12px; width: 100%; border-radius: 30px; border: 2px solid #ffe4ec; background: #fff0f6; margin-bottom: 10px; text-align: center; font-size: 1rem;">
+      <button type="submit" style="background-color: #6b4c9a; color: white; border: none; padding: 10px 20px; border-radius: 30px; font-size: 1rem; width: 100%;">اشترك</button>
+    </form>
+
+    <!-- معلومات التواصل -->
+    <p style="color: #6b4c9a; font-size: 1rem; margin-bottom: 20px;">📞 1234-567-890 | ✉️ info@example.com</p>
+
+    <!-- زر الرجوع للأعلى -->
+    <a href="#" class="back-to-top" style="display: inline-block; color: #6b4c9a; font-size: 1.2rem; font-weight: bold; margin-bottom: 20px;">⬆️ الرجوع للأعلى</a>
+
+    <!-- الحقوق -->
     <p style="color: #6b4c9a; font-size: 0.9rem;">© جميع الحقوق محفوظة 2025 | كوندوتوريا دعاء</p>
 
   </div>
 </footer>
+
+
+<!-- جافاسكريبت لزر الرجوع للأعلى -->
+<script>
+  document.querySelector('.back-to-top').addEventListener('click', function(e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
 
 
 
@@ -365,7 +403,11 @@
 <!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
 <script src="script.js">
+
+  
  
 </script>
 
