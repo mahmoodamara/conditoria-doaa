@@ -1,190 +1,286 @@
+/* Base Styles */
 body {
-  font-family: "Cairo", sans-serif;
-  overflow-x: hidden;
-  background-color: #fafafa;
-  margin: 0;
-  padding: 0;
-}
-
-/* Navbar */
-.navbar {
-    background-color: rgba(255, 255, 255, 0.2) !important; /* شفاف */
-    backdrop-filter: blur(10px); /* تأثير تمويه بسيط */
+    font-family: "Cairo", sans-serif;
+    overflow-x: hidden;
+    background-color: #fafafa;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Navbar */
+  .navbar {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    backdrop-filter: blur(10px);
     transition: background-color 0.3s ease;
   }
-
   .navbar .nav-link,
   .navbar-brand {
-    color: #6b4c9a !important; /* لون النص أبيض */
+    color: #6b4c9a !important;
     font-weight: bold;
   }
-
-  /* تغيير اللون عند التمرير إن أردت */
   .navbar.scrolled {
     background-color: rgba(255, 255, 255, 0.9) !important;
     color: #333 !important;
   }
-/* Custom Buttons */
-.btn-pink {
-  background: linear-gradient(to right, #ff6ec4, #7873f5);
-  color: white;
-  border: none;
-  box-shadow: 0 4px 10px rgba(255, 110, 196, 0.5);
-  transition: 0.3s;
-}
-.btn-pink:hover {
-  background: linear-gradient(to right, #f538a0, #6358dc);
-  transform: scale(1.05);
-}
-.btn-outline-pink {
-  border: 2px solid #ff6ec4;
-  color: #ff6ec4;
-  transition: 0.3s;
-}
-.btn-outline-pink:hover {
-  background: #ff6ec4;
-  color: white;
-}
-
-.hero {
+  
+  /* Buttons */
+  .btn-pink {
+    background: linear-gradient(to right, #ff6ec4, #7873f5);
+    color: white;
+    border: none;
+    box-shadow: 0 4px 10px rgba(255, 110, 196, 0.5);
+    transition: 0.3s;
+  }
+  .btn-pink:hover {
+    background: linear-gradient(to right, #f538a0, #6358dc);
+    transform: scale(1.05);
+  }
+  .btn-outline-pink {
+    border: 2px solid #ff6ec4;
+    color: #ff6ec4;
+    transition: 0.3s;
+  }
+  .btn-outline-pink:hover {
+    background: #ff6ec4;
+    color: white;
+  }
+  
+  /* Hero Section */
+  .hero {
     position: relative;
     overflow: hidden;
     height: 100vh;
     background: linear-gradient(135deg, #ffe4ec 0%, #f3d1f4 100%);
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding-top: 0; /* لا padding أعلى */
   }
-
-.hero h1 {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
-}
-
-/* About Section */
-.about-section {
-  padding: 80px 20px;
-  background: linear-gradient(135deg, #f8e9f9 0%, #ffffff 100%);
-}
-.about-content {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
-}
-.about-text {
-  flex: 1 1 400px;
-  color: #555;
-  text-align: right;
-}
-.about-text h2 {
-  color: #6b4c9a;
-  font-weight: 700;
-  margin-bottom: 20px;
-  font-size: 2.5rem;
-  position: relative;
-}
-.about-text h2::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 4px;
-  background: #ff6ec4;
-  margin-top: 10px;
-  border-radius: 2px;
-}
-.about-text p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  margin-top: 20px;
-  color: #666;
-}
-.about-image {
-  flex: 1 1 350px;
-  display: flex;
-  justify-content: center;
-}
-.about-image img {
-  width: 100%;
-  max-width: 350px;
-  border-radius: 20px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-.about-image img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
-}
-@media (max-width: 992px) {
-  .navbar-collapse {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    width: 100%;
-    background: #ffe4ec;
-    z-index: 999;
-    border-radius: 0 0 15px 15px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+  .hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
   }
-
-  .navbar-collapse.show {
-    display: block;
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
   }
-}
-
-/* Media Queries */
-@media (max-width: 992px) {
+  
+  /* About Section */
+  .about-section {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #f8e9f9 0%, #ffffff 100%);
+  }
   .about-content {
-    flex-direction: column;
-    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
   }
   .about-text {
-    text-align: center;
+    flex: 1 1 400px;
+    color: #555;
+    text-align: right;
+  }
+  .about-text h2 {
+    color: #6b4c9a;
+    font-weight: 700;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    position: relative;
   }
   .about-text h2::after {
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2.5rem;
-  }
-  .hero p {
-    font-size: 1rem;
-  }
-  .about-text h2 {
-    font-size: 2rem;
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #ff6ec4;
+    margin-top: 10px;
+    border-radius: 2px;
   }
   .about-text p {
-    font-size: 1rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-top: 20px;
+    color: #666;
   }
-}
+  .about-image {
+    flex: 1 1 350px;
+    display: flex;
+    justify-content: center;
+  }
+  .about-image img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+  .about-image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 992px) {
+    .about-content {
+      flex-direction: column;
+      text-align: center;
+    }
+    .about-text {
+      text-align: center;
+    }
+    .about-text h2::after {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 2.2rem;
+    }
+    .hero p {
+      font-size: 1.1rem;
+    }
+    .about-text h2 {
+      font-size: 2rem;
+    }
+    .about-text p {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hero {
+      padding: 20px;
+    }
+    .hero h1 {
+      font-size: 1.8rem;
+    }
+    .hero p {
+      font-size: 1rem;
+    }
+    .about-text h2 {
+      font-size: 1.7rem;
+    }
+    .about-text p {
+      font-size: 0.95rem;
+    }
+  }
 
-@media (max-width: 480px) {
-  .hero h1 {
-    font-size: 2rem;
+
+  
+  /* Responsive adjustments for buttons */
+  @media (max-width: 576px) {
+    .buttons-container .btn {
+      width: 100%;
+      text-align: center;
+    }
   }
-  .hero p {
-    font-size: 0.9rem;
+
+  .buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
   }
-  .about-text h2 {
-    font-size: 1.7rem;
+  
+  /* زرار داخل الـ Container */
+  .buttons-container .btn {
+    width: 280px; /* عرض موحد للزرار */
+    max-width: 90%; /* مناسب لشاشات صغيرة جدا */
+    text-align: center;
   }
-  .about-text p {
-    font-size: 0.95rem;
+  
+  /* تحسين إضافي للأجهزة الكبيرة */
+  @media (min-width: 768px) {
+    .buttons-container {
+      flex-direction: row;
+      justify-content: center;
+    }
+  
+    .buttons-container .btn {
+      width: auto;
+      min-width: 200px;
+    }
   }
-}
+  
+/* Navbar Styling for Mobile */
+@media (max-width: 992px) {
+    .navbar-collapse {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 100%;
+      background: #ffe4ec;
+      z-index: 999;
+      border-radius: 0 0 15px 15px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+  
+    .navbar-collapse.show {
+      display: block;
+    }
+  
+    /* About Section Adjustments */
+    .about-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .about-text {
+      text-align: center;
+    }
+  
+    .about-text h2::after {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  
+  /* Text Adjustments for Tablets */
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 1.8rem;
+    }
+  
+    .hero p {
+      font-size: 1.1rem;
+    }
+  
+    .about-text h2 {
+      font-size: 1.6rem;
+    }
+  
+    .about-text p {
+      font-size: 1rem;
+    }
+  }
+  
+  /* Text Adjustments for Mobile Phones */
+  @media (max-width: 480px) {
+    .hero h1 {
+      font-size: 1.5rem;
+    }
+  
+    .hero p {
+      font-size: 1rem;
+    }
+  
+    .about-text h2 {
+      font-size: 1.4rem;
+    }
+  
+    .about-text p {
+      font-size: 0.95rem;
+    }
+  }
+  
 #products {
   padding: 60px 20px;
   background: #fff;
@@ -617,3 +713,5 @@ body {
       height: 200px;
     }
   }
+
+  
