@@ -74,172 +74,231 @@
   /* ===========================
      4. Hero Section
      =========================== */
-  .hero {
-    position: relative;
-    overflow: hidden;
-    min-height: 100vh;
-    background: linear-gradient(135deg, #ffe4ec 0%, #f3d1f4 100%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding-top: 80px; /* to avoid navbar */
-  }
-  .hero h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    margin-bottom: 10px;
-  }
-  .hero p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-  }
-  
-  /* Hero – Responsive */
-  @media (max-width: 768px) {
-    .hero h1 {
-      font-size: 1.8rem;
-    }
-    .hero p {
-      font-size: 1.1rem;
-    }
-  }
-  @media (max-width: 480px) {
-    .hero h1 {
-      font-size: 1.5rem;
-    }
-    .hero p {
-      font-size: 1rem;
-    }
-  }
+     .hero {
+        position: relative;
+        overflow: hidden;
+        min-height: 100vh;
+        background: linear-gradient(135deg, #ffe4ec 0%, #f3d1f4 100%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding-top: 80px; /* لتفادي تغطية النافبار */
+        padding-left: 20px;
+        padding-right: 20px;
+        box-sizing: border-box;
+      }
+      
+      .hero h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+        line-height: 1.2;
+      }
+      
+      .hero p {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+        max-width: 600px;
+      }
+      
+      /* Responsive for tablets */
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 2.2rem;
+        }
+        .hero p {
+          font-size: 1.3rem;
+        }
+      }
+      
+      /* Responsive for mobile devices */
+      @media (max-width: 480px) {
+        .hero h1 {
+          font-size: 1.8rem;
+        }
+        .hero p {
+          font-size: 1.1rem;
+        }
+      }
+      
+      /* Extra small devices (phones under 360px) */
+      @media (max-width: 360px) {
+        .hero h1 {
+          font-size: 1.5rem;
+        }
+        .hero p {
+          font-size: 1rem;
+        }
+      }
+      
   
   /* ===========================
      5. About Section
      =========================== */
-  .about-section {
-    padding: 80px 20px;
-    background: linear-gradient(135deg, #f8e9f9 0%, #ffffff 100%);
-  }
-  .about-content {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-  }
-  .about-text {
-    flex: 1 1 400px;
-    color: #555;
-    text-align: right;
-  }
-  .about-text h2 {
-    color: #6b4c9a;
-    font-weight: 700;
-    margin-bottom: 20px;
-    font-size: 2.5rem;
-    position: relative;
-  }
-  .about-text h2::after {
-    content: "";
-    display: block;
-    width: 60px;
-    height: 4px;
-    background: #ff6ec4;
-    margin-top: 10px;
-    border-radius: 2px;
-  }
-  .about-text p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    margin-top: 20px;
-    color: #666;
-  }
-  .about-image {
-    flex: 1 1 350px;
-    display: flex;
-    justify-content: center;
-  }
-  .about-image img {
-    width: 100%;
-    max-width: 350px;
-    border-radius: 20px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-  }
-  .about-image img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
-  }
-  
-  /* About – Responsive */
-  @media (max-width: 992px) {
-    .about-content {
-      flex-direction: column;
-      text-align: center;
-    }
-    .about-text {
-      text-align: center;
-    }
-    .about-text h2::after {
-      margin: 10px auto 0;
-    }
-    .about-image img {
-        max-width: 250px;
+     .about-section {
+        padding: 80px 20px;
+        background: linear-gradient(135deg, #f8e9f9 0%, #ffffff 100%);
+        box-sizing: border-box;
       }
-  }
-  @media (max-width: 768px) {
-    .about-text h2 {
-      font-size: 2rem;
-    }
-    .about-text p {
-      font-size: 1rem;
-    }
-  }
-  @media (max-width: 480px) {
-    .about-text h2 {
-      font-size: 1.7rem;
-    }
-    .about-text p {
-      font-size: 0.95rem;
-    }
-    .about-image img {
-        max-width: 200px;
+      
+      .about-content {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
       }
-  }
+      
+      .about-text {
+        flex: 1 1 400px;
+        color: #555;
+        text-align: right;
+        max-width: 600px;
+      }
+      
+      .about-text h2 {
+        color: #6b4c9a;
+        font-weight: 700;
+        margin-bottom: 20px;
+        font-size: 2.5rem;
+        position: relative;
+        line-height: 1.3;
+      }
+      
+      .about-text h2::after {
+        content: "";
+        display: block;
+        width: 60px;
+        height: 4px;
+        background: #ff6ec4;
+        margin-top: 10px;
+        border-radius: 2px;
+      }
+      
+      .about-text p {
+        font-size: 1.2rem;
+        line-height: 1.8;
+        margin-top: 20px;
+        color: #666;
+        max-width: 100%;
+      }
+      
+      .about-image {
+        flex: 1 1 350px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      .about-image img {
+        width: 100%;
+        max-width: 350px;
+        border-radius: 20px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+      }
+      
+      .about-image img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+      }
+      
+      /* Responsive – tablets */
+      @media (max-width: 992px) {
+        .about-content {
+          flex-direction: column;
+          text-align: center;
+        }
+        .about-text {
+          text-align: center;
+        }
+        .about-text h2::after {
+          margin: 10px auto 0;
+        }
+        .about-image img {
+          max-width: 280px;
+        }
+      }
+      
+      /* Responsive – medium devices */
+      @media (max-width: 768px) {
+        .about-text h2 {
+          font-size: 2rem;
+        }
+        .about-text p {
+          font-size: 1.05rem;
+        }
+      }
+      
+      /* Responsive – small devices */
+      @media (max-width: 480px) {
+        .about-text h2 {
+          font-size: 1.7rem;
+        }
+        .about-text p {
+          font-size: 1rem;
+        }
+        .about-image img {
+          max-width: 220px;
+        }
+      }
+      
+      /* Extra small devices (under 360px) */
+      @media (max-width: 360px) {
+        .about-text h2 {
+          font-size: 1.5rem;
+        }
+        .about-text p {
+          font-size: 0.95rem;
+        }
+        .about-image img {
+          max-width: 200px;
+        }
+      }
+      
   
   /* ===========================
      6. Buttons Container
      =========================== */
-  .buttons-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    margin-top: 20px;
-  }
-  .buttons-container .btn {
-    width: 280px;    /* unified width */
-    max-width: 90%;  /* on very small screens */
-    text-align: center;
-  }
-  
-  /* Buttons Container – Responsive */
-  @media (max-width: 576px) {
-    .buttons-container .btn {
-      width: 100%;
-    }
-  }
-  @media (min-width: 768px) {
-    .buttons-container {
-      flex-direction: row;
-      justify-content: center;
-    }
-    .buttons-container .btn {
-      width: auto;
-      min-width: 200px;
-    }
-  }
+     .buttons-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        margin-top: 20px;
+        padding: 0 20px;
+        box-sizing: border-box;
+      }
+      
+      .buttons-container .btn {
+        width: 280px;       /* عرض موحد على الشاشات العادية */
+        max-width: 100%;    /* تقييد العرض على الشاشات الصغيرة */
+        text-align: center;
+      }
+      
+      /* Responsive – small devices (≤576px) */
+      @media (max-width: 576px) {
+        .buttons-container .btn {
+          width: 100%;
+        }
+      }
+      
+      /* Responsive – medium devices (≥768px) */
+      @media (min-width: 768px) {
+        .buttons-container {
+          flex-direction: row;
+          justify-content: center;
+          flex-wrap: wrap;
+        }
+        .buttons-container .btn {
+          width: auto;
+          min-width: 200px;
+          max-width: 100%;
+        }
+      }
+      
   
   /* ===========================
      7. Products Section
@@ -248,6 +307,7 @@
 #products {
     padding: 60px 20px;
     background: #fff;
+    box-sizing: border-box;
   }
   
   #products h2 {
@@ -255,7 +315,8 @@
     color: #6b4c9a;
     margin-bottom: 40px;
     font-weight: bold;
-    font-size: 2.5rem;
+    font-size: 2.3rem; /* تصغير طفيف */
+    line-height: 1.3;
   }
   
   /* Category Buttons */
@@ -267,18 +328,18 @@
     margin-bottom: 30px;
     padding-bottom: 10px;
     scroll-snap-type: x mandatory;
-    scrollbar-width: thin; /* For Firefox */
-    -webkit-overflow-scrolling: touch; /* For smooth scroll on mobile */
+    scrollbar-width: thin; /* Firefox */
+    -webkit-overflow-scrolling: touch; /* Smooth mobile scroll */
   }
   
   .category-buttons .btn {
     flex: 0 0 auto;
     min-width: 140px;
-    font-size: 1rem;
+    font-size: 0.95rem;
     font-weight: 600;
     padding: 10px 20px;
     border-radius: 30px;
-    transition: 0.3s;
+    transition: background 0.3s, color 0.3s;
     scroll-snap-align: start;
     white-space: nowrap;
   }
@@ -286,7 +347,7 @@
   .category-buttons .btn:hover,
   .category-buttons .btn.active {
     background: linear-gradient(to right, #ff6ec4, #7873f5);
-    color: white;
+    color: #fff;
   }
   
   /* Customize Scrollbar */
@@ -352,23 +413,24 @@
   
   .card-title {
     color: #6b4c9a;
-    font-size: 1.1rem;
+    font-size: 1rem; /* تصغير طفيف */
     font-weight: bold;
     margin-bottom: 10px;
   }
   
   .card-text {
     color: #ff6ec4;
-    font-size: 1rem;
+    font-size: 0.95rem; /* تصغير طفيف */
     font-weight: bold;
     margin-bottom: 15px;
   }
   
   /* Media Queries */
+  
   /* Screens ≤ 768px */
   @media (max-width: 768px) {
     #products h2 {
-      font-size: 1.5rem;
+      font-size: 1.8rem;
     }
   
     .category-buttons {
@@ -382,7 +444,7 @@
     .category-buttons .btn {
       flex: 0 0 auto;
       min-width: 110px;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       padding: 8px 15px;
       scroll-snap-align: start;
     }
@@ -398,25 +460,26 @@
   
     .card {
       flex: 0 0 auto;
-      width: 250px;
+      width: 240px;
       scroll-snap-align: start;
     }
   
     .card-img-top {
-      height: 130px;
+      height: 140px;
     }
   
     .card-title {
-      font-size: 0.8rem;
+      font-size: 0.85rem;
     }
   
     .card-text {
-      font-size: 0.9rem;
+      font-size: 0.85rem;
     }
+  
     .btn-pink {
-        padding: 4px 12px;
-        font-size: 0.9rem;
-      }
+      padding: 4px 12px;
+      font-size: 0.85rem;
+    }
   }
   
   /* Screens ≤ 576px */
@@ -428,7 +491,33 @@
     .category-buttons .btn {
       min-width: 100px;
       font-size: 0.75rem;
-      padding: 4px 13px;
+      padding: 6px 13px;
+    }
+  
+    .card {
+      width: 180px;
+    }
+  
+    .card-img-top {
+      height: 120px;
+    }
+  
+    .btn-pink {
+      padding: 4px 10px;
+      font-size: 0.8rem;
+    }
+  }
+  
+  /* Screens ≤ 400px */
+  @media (max-width: 400px) {
+    #products h2 {
+      font-size: 1.5rem;
+    }
+  
+    .category-buttons .btn {
+      min-width: 90px;
+      font-size: 0.65rem;
+      padding: 5px 10px;
     }
   
     .card {
@@ -436,49 +525,29 @@
     }
   
     .card-img-top {
-      height: 120px;
-    }
-    .btn-pink {
-        padding: 4px 12px;
-        font-size: 0.8rem;
-      }
-  }
-  
-  /* Screens ≤ 400px */
-  @media (max-width: 400px) {
-    .category-buttons .btn {
-      min-width: 90px;
-      font-size: 0.5rem;
-      padding: 6px 12px;
-    }
-  
-    .card {
-      width: 150px;
-    }
-  
-    .card-img-top {
       height: 110px;
     }
   
     .card-title {
-      font-size: 0.9rem;
-    }
-  
-    .card-text {
       font-size: 0.8rem;
     }
   
+    .card-text {
+      font-size: 0.75rem;
+    }
+  
     .btn-pink {
-      padding: 4px 12px;
+      padding: 4px 8px;
       font-size: 0.75rem;
     }
   }
+  
   
   /* ===========================
      8. Offers Section
      =========================== */
  /* Offers Section */
-#offers .offers-grid {
+ #offers .offers-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
@@ -486,6 +555,8 @@
   }
   
   /* Offers – Responsive */
+  
+  /* Screens ≤ 768px */
   @media (max-width: 768px) {
     #offers .offers-grid {
       display: flex;
@@ -495,11 +566,10 @@
       padding-bottom: 10px;
       scroll-snap-type: x mandatory;
       -webkit-overflow-scrolling: touch;
-      /* نترك السكروول ظاهر */
     }
   
     #offers .offers-grid::-webkit-scrollbar {
-      height: 6px; /* إظهار الشريط */
+      height: 6px;
     }
   
     #offers .offers-grid::-webkit-scrollbar-thumb {
@@ -513,7 +583,7 @@
   
     #offers .card {
       flex: 0 0 auto;
-      width: 250px;
+      width: 230px; /* تصغير العرض قليلاً */
       scroll-snap-align: start;
     }
   
@@ -522,27 +592,18 @@
     }
   
     #offers .card-title {
-      font-size: 0.8rem;
+      font-size: 0.8rem; /* تصغير طفيف */
     }
   
     #offers .card-text {
-      font-size: 0.9rem;
+      font-size: 0.85rem; /* تصغير طفيف */
     }
   }
   
+  /* Screens ≤ 576px */
   @media (max-width: 576px) {
     #offers .card {
-      width: 160px;
-    }
-  
-    #offers .card-img-top {
-      height: 130px;
-    }
-  }
-  
-  @media (max-width: 400px) {
-    #offers .card {
-      width: 150px;
+      width: 170px;
     }
   
     #offers .card-img-top {
@@ -550,11 +611,30 @@
     }
   
     #offers .card-title {
-      font-size: 0.9rem;
+      font-size: 0.75rem;
     }
   
     #offers .card-text {
       font-size: 0.8rem;
+    }
+  }
+  
+  /* Screens ≤ 400px */
+  @media (max-width: 400px) {
+    #offers .card {
+      width: 150px;
+    }
+  
+    #offers .card-img-top {
+      height: 100px;
+    }
+  
+    #offers .card-title {
+      font-size: 0.7rem;
+    }
+  
+    #offers .card-text {
+      font-size: 0.75rem;
     }
   }
   
@@ -563,13 +643,14 @@
      9. Success Stories Section
      =========================== */
  /* Success Stories Section */
-#success-stories .stories-grid {
+ #success-stories .stories-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
     margin-top: 20px;
   }
   
+  /* Card Styles */
   #success-stories .card {
     border: none;
     border-radius: 20px;
@@ -612,22 +693,24 @@
   
   #success-stories .card-title {
     color: #6b4c9a;
-    font-size: 1.1rem;
+    font-size: 1rem; /* تم تصغيره قليلاً */
     font-weight: bold;
     margin-bottom: 10px;
   }
   
   #success-stories .card-text {
     color: #ff6ec4;
-    font-size: 1rem;
+    font-size: 0.95rem; /* تم تصغيره قليلاً */
     font-weight: bold;
     margin-bottom: 15px;
   }
   
-  /* Success Stories – Responsive */
+  /* Responsive */
+  
+  /* Screens ≤ 768px */
   @media (max-width: 768px) {
     #success-stories h2 {
-      font-size: 2rem;
+      font-size: 1.8rem; /* تصغير العنوان */
     }
   
     #success-stories .stories-grid {
@@ -640,7 +723,7 @@
       -webkit-overflow-scrolling: touch;
     }
   
-    /* تخصيص شكل الشريط */
+    /* Scrollbar style */
     #success-stories .stories-grid::-webkit-scrollbar {
       height: 6px;
     }
@@ -656,7 +739,7 @@
   
     #success-stories .card {
       flex: 0 0 auto;
-      width: 250px;
+      width: 230px; /* عرض أصغر للكروت */
       scroll-snap-align: start;
     }
   
@@ -669,18 +752,26 @@
     }
   
     #success-stories .card-text {
-      font-size: 0.9rem;
+      font-size: 0.85rem;
     }
   }
   
   /* Screens ≤ 576px */
   @media (max-width: 576px) {
     #success-stories .card {
-      width: 160px;
+      width: 170px;
     }
   
     #success-stories .card-img-top {
-      height: 120px;
+      height: 110px;
+    }
+  
+    #success-stories .card-title {
+      font-size: 0.75rem;
+    }
+  
+    #success-stories .card-text {
+      font-size: 0.8rem;
     }
   }
   
@@ -691,15 +782,15 @@
     }
   
     #success-stories .card-img-top {
-      height: 110px;
+      height: 100px;
     }
   
     #success-stories .card-title {
-      font-size: 0.9rem;
+      font-size: 0.7rem;
     }
   
     #success-stories .card-text {
-      font-size: 0.8rem;
+      font-size: 0.75rem;
     }
   }
   
@@ -707,22 +798,54 @@
   /* ===========================
      10. Contact Section
      =========================== */
-  #contact input,
-  #contact textarea {
-    border-radius: 30px;
-    padding: 15px 20px;
-    background: #fff0f6;
-    border: 2px solid #ffe4ec;
-    transition: border-color 0.3s ease;
-    font-size: 1rem;
-  }
-  #contact input:focus,
-  #contact textarea:focus {
-    border-color: #7873f5;
-    outline: none;
-    box-shadow: none;
-  }
-  
+     #contact input,
+     #contact textarea {
+       border-radius: 30px;
+       padding: 15px 20px;
+       background: #fff0f6;
+       border: 2px solid #ffe4ec;
+       transition: border-color 0.3s ease;
+       font-size: 1rem;
+       width: 100%;
+       box-sizing: border-box;
+     }
+     
+     #contact input:focus,
+     #contact textarea:focus {
+       border-color: #7873f5;
+       outline: none;
+       box-shadow: none;
+     }
+     
+     /* Responsive Adjustments */
+     
+     /* Screens ≤ 768px */
+     @media (max-width: 768px) {
+       #contact input,
+       #contact textarea {
+         font-size: 0.95rem;
+         padding: 13px 18px;
+       }
+     }
+     
+     /* Screens ≤ 576px */
+     @media (max-width: 576px) {
+       #contact input,
+       #contact textarea {
+         font-size: 0.9rem;
+         padding: 12px 16px;
+       }
+     }
+     
+     /* Screens ≤ 400px */
+     @media (max-width: 400px) {
+       #contact input,
+       #contact textarea {
+         font-size: 0.85rem;
+         padding: 10px 14px;
+       }
+     }
+     
   /* Contact Button */
   .btn-pink {
     background: linear-gradient(to right, #ff6ec4, #7873f5);
@@ -741,65 +864,122 @@
   /* ===========================
      11. Footer Links
      =========================== */
-  .footer-link {
-    color: #6b4c9a;
-    font-weight: bold;
-    text-decoration: none;
-    padding: 0 10px;
-    transition: color 0.3s;
-  }
-  .footer-link:hover {
-    color: #ff6ec4;
-    text-decoration: underline;
-  }
+     .footer-link {
+        color: #6b4c9a;
+        font-weight: bold;
+        text-decoration: none;
+        padding: 0 10px;
+        font-size: 1rem; /* إضافة حجم خط افتراضي */
+        transition: color 0.3s, text-decoration 0.3s;
+      }
+      
+      .footer-link:hover {
+        color: #ff6ec4;
+        text-decoration: underline;
+      }
+      
+      /* Responsive Adjustments */
+      
+      /* Screens ≤ 768px */
+      @media (max-width: 768px) {
+        .footer-link {
+          font-size: 0.9rem;
+          padding: 0 8px;
+        }
+      }
+      
+      /* Screens ≤ 576px */
+      @media (max-width: 576px) {
+        .footer-link {
+          font-size: 0.85rem;
+          padding: 0 6px;
+        }
+      }
+      
+      /* Screens ≤ 400px */
+      @media (max-width: 400px) {
+        .footer-link {
+          font-size: 0.8rem;
+          padding: 0 5px;
+        }
+      }
+      
   
   /* ===========================
      12. Gallery Section
      =========================== */
-  #gallery .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    margin-top: 30px;
-  }
-  #gallery .gallery-item img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 15px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  #gallery .gallery-item img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  }
-  
-  /* Gallery – Responsive */
-  @media (max-width: 768px) {
-    #gallery .gallery-grid {
-      display: flex;
-      flex-wrap: nowrap;
-      overflow-x: auto;
-      gap: 15px;
-      scroll-snap-type: x mandatory;
-      padding-bottom: 10px;
-      -webkit-overflow-scrolling: touch;
-      scrollbar-width: none;
-      -ms-overflow-style: none;
-    }
-    #gallery .gallery-grid::-webkit-scrollbar {
-      display: none;
-    }
-    #gallery .gallery-item {
-      flex: 0 0 auto;
-      width: 250px;
-      scroll-snap-align: start;
-    }
-    #gallery .gallery-item img {
-      height: 200px;
-    }
-  }
-  
+     #gallery .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        margin-top: 30px;
+      }
+      
+      /* Individual Gallery Item */
+      #gallery .gallery-item img {
+        width: 100%;
+        height: 240px; /* تصغير طفيف */
+        object-fit: cover;
+        border-radius: 15px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      
+      #gallery .gallery-item img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      }
+      
+      /* Responsive - Screens ≤ 768px */
+      @media (max-width: 768px) {
+        #gallery .gallery-grid {
+          display: flex;
+          flex-wrap: nowrap;
+          overflow-x: auto;
+          gap: 15px;
+          scroll-snap-type: x mandatory;
+          padding-bottom: 10px;
+          -webkit-overflow-scrolling: touch;
+          scrollbar-width: none; /* Firefox */
+          -ms-overflow-style: none; /* IE and Edge */
+        }
+      
+        #gallery .gallery-grid::-webkit-scrollbar {
+          display: none; /* Chrome, Safari */
+        }
+      
+        #gallery .gallery-item {
+          flex: 0 0 auto;
+          width: 220px; /* تصغير الكارت قليلاً */
+          scroll-snap-align: start;
+        }
+      
+        #gallery .gallery-item img {
+          height: 180px; /* تصغير ارتفاع الصورة */
+        }
+      }
+      
+      /* Responsive - Screens ≤ 576px */
+      @media (max-width: 576px) {
+        #gallery .gallery-item {
+          width: 180px;
+        }
+      
+        #gallery .gallery-item img {
+          height: 160px;
+        }
+      }
+      
+      /* Responsive - Screens ≤ 400px */
+      @media (max-width: 400px) {
+        #gallery .gallery-item {
+          width: 150px;
+        }
+      
+        #gallery .gallery-item img {
+          height: 140px;
+        }
+      }
+      
   /* ===========================
      13. Large-Screen Container
      =========================== */
