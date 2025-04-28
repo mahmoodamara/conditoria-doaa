@@ -48,7 +48,7 @@
   /* ===========================
      3. Buttons (Global)
      =========================== */
-  .btn-pink2 {
+  .btn-pink {
     background: linear-gradient(to right, #ff6ec4, #7873f5);
     color: white;
     border: none;
@@ -56,7 +56,7 @@
     border-radius: 30px;
     transition: 0.3s;
   }
-  .btn-pink2:hover {
+  .btn-pink:hover {
     background: linear-gradient(to right, #f538a0, #6358dc);
     transform: scale(1.05);
   }
@@ -413,6 +413,10 @@
     .card-text {
       font-size: 0.9rem;
     }
+    .btn-pink {
+        padding: 4px 12px;
+        font-size: 0.9rem;
+      }
   }
   
   /* Screens ≤ 576px */
@@ -436,7 +440,7 @@
     }
     .btn-pink {
         padding: 4px 12px;
-        font-size: 0.6rem;
+        font-size: 0.8rem;
       }
   }
   
@@ -466,7 +470,7 @@
   
     .btn-pink {
       padding: 4px 12px;
-      font-size: 0.2rem;
+      font-size: 0.75rem;
     }
   }
   
