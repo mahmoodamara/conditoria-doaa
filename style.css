@@ -159,7 +159,7 @@ body {
   
   @media (max-width: 480px) {
     .hero {
-      padding: 20px;
+      padding: 100px;
     }
     .hero h1 {
       font-size: 1.8rem;
@@ -184,7 +184,7 @@ body {
       text-align: center;
     }
     .hero {
-        padding-top: 150px; /* 🛠️ نزيد أكثر للهواتف الصغيرة */
+        padding-top: 110px; /* 🛠️ نزيد أكثر للهواتف الصغيرة */
       }
   }
 
