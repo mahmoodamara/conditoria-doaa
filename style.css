@@ -49,14 +49,15 @@ body {
   .hero {
     position: relative;
     overflow: hidden;
-    height: 100vh;
+    min-height: 100vh;
     background: linear-gradient(135deg, #ffe4ec 0%, #f3d1f4 100%);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-  }
+  padding-top: 100px; /* تبتعد عن النافبار */
+  padding-bottom: 40px; /* تضيف مساحة تحت الصورة */  }
   .hero h1 {
     font-size: 3rem;
     font-weight: 700;
@@ -139,6 +140,9 @@ body {
   }
   
   @media (max-width: 768px) {
+    .hero {
+        padding-top: 100px; /* 🛠️ نزيد المسافة للهواتف والتابلت */
+      }
     .hero h1 {
       font-size: 2.2rem;
     }
@@ -179,6 +183,9 @@ body {
       width: 100%;
       text-align: center;
     }
+    .hero {
+        padding-top: 150px; /* 🛠️ نزيد أكثر للهواتف الصغيرة */
+      }
   }
 
   .buttons-container {
