@@ -1,0 +1,137 @@
+/* ===========================
+   1. Base Styles
+   =========================== */
+   body {
+    font-family: "Cairo", sans-serif;
+    overflow-x: hidden;
+    background-color: #fafafa;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* ===========================
+     2. Navbar
+     =========================== */
+  .navbar {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    backdrop-filter: blur(10px);
+    transition: background-color 0.3s ease;
+  }
+  .navbar .nav-link,
+  .navbar-brand {
+    color: #6b4c9a !important;
+    font-weight: bold;
+  }
+  .navbar.scrolled {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    color: #333 !important;
+  }
+  
+  /* Navbar – Mobile */
+  @media (max-width: 992px) {
+    .navbar-collapse {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 100%;
+      background: #ffe4ec;
+      z-index: 999;
+      border-radius: 0 0 15px 15px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+    .navbar-collapse.show {
+      display: block;
+    }
+  }
+  
+  /* ===========================
+     3. Buttons (Global)
+     =========================== */
+  .btn-pink {
+    background: linear-gradient(to right, #ff6ec4, #7873f5);
+    color: white;
+    border: none;
+    box-shadow: 0 4px 10px rgba(255, 110, 196, 0.5);
+    border-radius: 30px;
+    transition: 0.3s;
+  }
+  .btn-pink:hover {
+    background: linear-gradient(to right, #f538a0, #6358dc);
+    transform: scale(1.05);
+  }
+  
+  .btn-outline-pink {
+    border: 2px solid #ff6ec4;
+    color: #ff6ec4;
+    transition: 0.3s;
+  }
+  .btn-outline-pink:hover {
+    background: #ff6ec4;
+    color: white;
+  }
+
+  .btn-pink2 {
+    background: linear-gradient(to right, #ff6ec4, #7873f5);
+    color: white;
+    border: none;
+    box-shadow: 0 4px 10px rgba(255, 110, 196, 0.5);
+    border-radius: 30px;
+    transition: 0.3s;
+  }
+  .btn-pink2:hover {
+    background: linear-gradient(to right, #f538a0, #6358dc);
+    transform: scale(1.05);
+  }
+  
+
+
+  .bubble1, .bubble2 {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 70%);
+  }
+  .bubble1 {
+    width: 150vw; height: 150vw;
+    top: -50vw; right: -50vw;
+  }
+  .bubble2 {
+    width: 100vw; height: 100vw;
+    bottom: -50vw; left: -50vw;
+    background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 70%);
+  }
+  @media (max-width: 480px) {
+    .bubble1, .bubble2 {
+      display: none; /* מסתיר בחלונות קטנים כדי לשפר קריאות */ 
+    }
+}  
+
+.hero h1 {
+    font-size: clamp(1.5rem, 5vw, 3rem); /* גודל מינימלי 1.5rem, מקסימלי 3rem */ 
+    font-weight: 700;
+    margin-bottom: 0.5em;
+    color: #6b4c9a;
+  }
+  .hero p {
+    font-size: clamp(1rem, 4vw, 1.2rem);
+    margin-bottom: 1.5em;
+    color: #6b4c9a;
+  }
+  
+
+  .hero-image img {
+    width: 100%;
+    max-width: 80vw;
+    border-radius: 20px;
+  }
+  .hero .btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+  }
+  @media (max-width: 480px) {
+    .hero .btn {
+      width: 100%;
+      margin-bottom: 0.5em;
+    }
+  }
+  
